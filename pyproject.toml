@@ -1,0 +1,19 @@
+[project]
+name = "sunainscent-backend-fastapi"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.116.1",
+    "passlib[bcrypt]>=1.7.4",
+    "pydantic>=2.11.7",
+    "pydantic-settings>=2.0.0",
+    "pymongo>=4.15.0",
+    "motor>=3.0.0",
+    "python-jose[cryptography]>=3.5.0",
+    "python-multipart>=0.0.20",
+    "python-dotenv>=1.0.0",
+    "email-validator>=2.0.0",
+    "uvicorn>=0.35.0",
+]
