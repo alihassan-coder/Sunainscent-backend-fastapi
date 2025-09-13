@@ -67,7 +67,14 @@ async def login_user(user_credentials: UserLogin, db = Depends(get_database)):
 @router.get("/me", response_model=UserResponse)
 async def get_current_user_profile(current_user: UserInDB = Depends(get_current_user)):
     """Get current user profile"""
-    return current_user
+    return UserResponse(
+        id=current_user.id,
+        email=current_user.email,
+        first_name=current_user.first_name,
+        phone=current_user.phone,
+        created_at=current_user.created_at,
+        is_admin=current_user.is_admin
+    )
 
 @router.get("/verify-token")
 async def verify_token(current_user: UserInDB = Depends(get_current_user)):

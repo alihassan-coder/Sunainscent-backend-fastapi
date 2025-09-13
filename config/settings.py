@@ -8,6 +8,8 @@ class Settings(BaseSettings):
     jwt_algorithm: str = os.getenv("JWT_ALGORITHM", "HS256")
     jwt_expiration_time: int = int(os.getenv("JWT_EXPIRATION_TIME", 1440))  # minutes
     api_v1_str: str = os.getenv("API_V1_STR", "/api/v1")
+    admin_email: str = os.getenv("ADMIN_EMAIL", "")
+    admin_password: str = os.getenv("ADMIN_PASSWORD", "")
     
     class Config:
         env_file = ".env"

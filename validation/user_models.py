@@ -25,6 +25,7 @@ class UserResponse(BaseModel):
     first_name: str
     phone: str
     created_at: datetime = Field(default_factory=datetime.utcnow)
+    is_admin: Optional[bool] = False
     
     @classmethod
     def from_mongo(cls, data: dict) -> "UserResponse":
@@ -46,6 +47,7 @@ class UserInDB(BaseModel):
     phone: str
     hashed_password: str
     created_at: datetime = Field(default_factory=datetime.utcnow)
+    is_admin: Optional[bool] = False
     
     @classmethod
     def from_mongo(cls, data: dict) -> "UserInDB":
