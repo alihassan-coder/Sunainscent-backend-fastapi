@@ -87,7 +87,7 @@ Sunainscent/
     ├── package.json
     └── .env.local                   # Environment variables
 ```
-
+https://github.com/ahmadtahir535353/2player-bot/invitations?invitation_token=de952b64f78f2638008debe13d67d692d6b40a2f
 ## Setup Instructions
 
 ### Prerequisites
